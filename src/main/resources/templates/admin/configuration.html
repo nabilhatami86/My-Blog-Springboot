@@ -3,9 +3,9 @@
 <header th:replace="admin/header::header-fragment"></header>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-    <!-- 引入页面头header-fragment -->
+    <!-- Include the page header (header-fragment) -->
     <div th:replace="admin/header::header-nav"></div>
-    <!-- 引入工具栏sidebar-fragment -->
+    <!-- Include the sidebar toolbar (sidebar-fragment) -->
     <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -21,29 +21,29 @@
                     <div class="col-md-4">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">站点信息</h3>
+                                <h3 class="card-title">Site Information</h3>
                             </div> <!-- /.card-body -->
                             <div class="card-body">
                                 <form role="form" id="websiteForm">
                                     <!-- text input -->
                                     <div class="form-group">
-                                        <label>站点名称</label>
+                                        <label>Site Name</label>
                                         <input type="text" class="form-control" id="websiteName"
                                                name="websiteName"
-                                               placeholder="站点名称" th:value="${configurations.get('websiteName')}">
+                                               placeholder="Site Name" th:value="${configurations.get('websiteName')}">
                                     </div>
                                     <div class="form-group">
-                                        <label>站点描述</label>
+                                        <label>Site Description</label>
                                         <input type="text" class="form-control" id="websiteDescription"
                                                name="websiteDescription"
                                                th:value="${configurations.get('websiteDescription')}"
-                                               placeholder="站点描述">
+                                               placeholder="Site Description">
                                     </div>
                                     <div class="form-group">
-                                        <label>站点Logo</label>
+                                        <label>Site Logo</label>
                                         <input type="text" class="form-control" id="websiteLogo"
                                                name="websiteLogo" th:value="${configurations.get('websiteLogo')}"
-                                               placeholder="站点Logo">
+                                               placeholder="Site Logo">
                                     </div>
                                     <div class="form-group">
                                         <label>favicon.ico</label>
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <button type="button" id="updateWebsiteButton" onsubmit="return false;"
-                                                class="btn btn-danger float-right">确认修改
+                                                class="btn btn-danger float-right">Confirm Changes
                                         </button>
                                     </div>
                                 </form>
@@ -64,32 +64,32 @@
                     <div class="col-md-4">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">个人信息</h3>
+                                <h3 class="card-title">Personal Information</h3>
                             </div> <!-- /.card-body -->
                             <div class="card-body">
                                 <form role="form" id="userInfoForm">
                                     <!-- input states -->
                                     <div class="form-group">
-                                        <label class="control-label">个人头像</label>
+                                        <label class="control-label">Personal Avatar</label>
                                         <input type="text" class="form-control" id="yourAvatar"
                                                name="yourAvatar" th:value="${configurations.get('yourAvatar')}"
-                                               placeholder="个人头像">
+                                               placeholder="Personal Avatar">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">个人名称</label>
+                                        <label class="control-label">Personal Name</label>
                                         <input type="text" class="form-control" id="yourName"
                                                name="yourName" th:value="${configurations.get('yourName')}"
-                                               placeholder="个人名称">
+                                               placeholder="Personal Name">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">个人邮箱</label>
+                                        <label class="control-label">Personal Email</label>
                                         <input type="email" class="form-control" id="yourEmail" name="yourEmail"
                                                th:value="${configurations.get('yourEmail')}"
-                                               placeholder="个人邮箱">
+                                               placeholder="Personal Email">
                                     </div>
                                     <div class="card-footer">
                                         <button type="button" id="updateUserInfoButton" onsubmit="return false;"
-                                                class="btn btn-danger float-right">确认修改
+                                                class="btn btn-danger float-right">Confirm Changes
                                         </button>
                                     </div>
                                 </form>
@@ -99,39 +99,39 @@
                     <div class="col-md-4">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">底部设置</h3>
+                                <h3 class="card-title">Footer Settings</h3>
                             </div> <!-- /.card-body -->
                             <div class="card-body">
                                 <form role="form" id="footerForm">
                                     <!-- input states -->
                                     <div class="form-group">
-                                        <label class="control-label">底部About</label>
+                                        <label class="control-label">Footer About</label>
                                         <input type="text" class="form-control" id="footerAbout"
                                                name="footerAbout" th:value="${configurations.get('footerAbout')}"
                                                placeholder="About">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">底部备案号</label>
+                                        <label class="control-label">Footer ICP Number</label>
                                         <input type="text" class="form-control" id="footerICP" name="footerICP"
                                                th:value="${configurations.get('footerICP')}"
-                                               placeholder="备案号">
+                                               placeholder="ICP Number">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">底部Copy Right</label>
+                                        <label class="control-label">Footer Copy Right</label>
                                         <input type="text" class="form-control" id="footerCopyRight"
                                                name="footerCopyRight"
                                                th:value="${configurations.get('footerCopyRight')}"
                                                placeholder="Copy Right">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">底部Powered By</label>
+                                        <label class="control-label">Footer Powered By</label>
                                         <input type="text" class="form-control" id="footerPoweredBy"
                                                name="footerPoweredBy"
                                                th:value="${configurations.get('footerPoweredBy')}"
                                                placeholder="Powered By">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">底部Powered By URL</label>
+                                        <label class="control-label">Footer Powered By URL</label>
                                         <input type="text" class="form-control" id="footerPoweredByURL"
                                                name="footerPoweredByURL"
                                                th:value="${configurations.get('footerPoweredByURL')}"
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <button type="button" id="updateFooterButton" onsubmit="return false;"
-                                                class="btn btn-danger float-right">确认修改
+                                                class="btn btn-danger float-right">Confirm Changes
                                         </button>
                                     </div>
                                 </form>
@@ -152,7 +152,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <!-- 引入页脚footer-fragment -->
+    <!-- Include the footer (footer-fragment) -->
     <div th:replace="admin/footer::footer-fragment"></div>
 </div>
 <!-- jQuery -->

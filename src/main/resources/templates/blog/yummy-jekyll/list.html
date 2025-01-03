@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="blog/yummy-jekyll/header::header('博客列表','My Blog')"></div>
+<div th:replace="blog/yummy-jekyll/header::header('Blog List','My Blog')"></div>
 <body>
 <div class="content">
     <section class="jumbotron geopattern">
         <div class="container">
             <div id="jumbotron-meta-info">
-                <h1>文章列表</h1>
+                <h1>Article List</h1>
                 <br>
                 <span class="meta-info">
                         <span class="mega-octicon octicon-list-unordered">
-                            &nbsp;&nbsp;<th:block th:text="|${pageName}页|"></th:block>
+                            &nbsp;&nbsp;<th:block th:text="|${pageName} Page|"></th:block>
                         </span>
                 </span>
             </div>
@@ -26,7 +26,7 @@
                             <li class="posts-list-item">
                                 <div class="posts-content">
                                     <span class="posts-list-meta"
-                                          th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2019-01-01</span>
+                                          th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2025-01-01</span>
                                     <a class="posts-list-name bubble-float-left" th:href="@{'/blog/' + ${blog.blogId}}">
                                         <th:block th:text="${blog.blogTitle}"></th:block>
                                     </a>

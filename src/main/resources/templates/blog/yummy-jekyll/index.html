@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="blog/yummy-jekyll/header::header('首页','My Blog')"></div>
+<div th:replace="blog/yummy-jekyll/header::header('Home','My Blog')"></div>
 <body>
 <div class="content">
     <section class="jumbotron">
         <div class="container">
-            <h3>我不怕千万人阻挡，只怕自己投降！</h3>
+            <h3>I am not afraid of being blocked by thousands of people, I am only afraid of surrendering myself!</h3>
         </div>
     </section>
     <section class="content container">
@@ -68,7 +68,7 @@
             </div>
 
             <div class="col-md-4">
-                <h3 class="sidebar-title">点击最多</h3>
+                <h3 class="sidebar-title">Most Clicked</h3>
                 <div id="blog-categories">
                     <ul class="list-group">
                         <th:block th:if="${null != hotBlogs}">
@@ -80,7 +80,7 @@
                         </th:block>
                     </ul>
                 </div>
-                <h3 class="sidebar-title">最新发布</h3>
+                <h3 class="sidebar-title">Recently Published</h3>
                 <div id="blog-categories">
                     <ul class="list-group">
                         <th:block th:if="${null != newBlogs}">
@@ -92,7 +92,7 @@
                         </th:block>
                     </ul>
                 </div>
-                <h3 class="sidebar-title">标签栏</h3>
+                <h3 class="sidebar-title">Tag Cloud</h3>
                 <div id="blog-categories">
                     <ul class="list-group">
                         <th:block th:if="${null != hotTags}">

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head-fragment">
     <meta charset="utf-8">
-    <title th:text="|${configurations.get('websiteName')} - ${pageName}|">主页</title>
+    <title th:text="|${configurations.get('websiteName')} - ${pageName}|">Home</title>
     <meta name="description" th:content="${configurations.get('websiteDescription')}">
     <link rel="shortcut icon" th:href="@{${configurations.get('websiteIcon')}}"/>
     <meta name="viewport" content="width=device-width">
@@ -31,16 +31,16 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav nav-pills navbar-nav">
                         <li>
-                            <a th:href="@{/index}">主页</a>
+                            <a th:href="@{/index}">Home</a>
                         </li>
                         <li>
-                            <a th:href="@{/link}">友链</a>
+                            <a th:href="@{/link}">Links</a>
                         </li>
                         <li>
-                            <a th:href="@{/about}">关于</a>
+                            <a th:href="@{/about}">About</a>
                         </li>
                         <li>
-                            <a href="https://github.com/ZHENFENG13">GitHub</a>
+                            <a href=">GitHub</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="clean-searchbox">
                 <form method="get" onsubmit="return false;" accept-charset="utf-8">
-                    <input class="searchfield" id="searchbox" type="text" placeholder="  搜索">
+                    <input class="searchfield" id="searchbox" type="text" placeholder="  Search">
                     <button class="searchbutton" id="searchbutton" onclick="search()">
                         <i class="fa fa-search"></i>
                     </button>
